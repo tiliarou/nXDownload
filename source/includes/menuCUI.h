@@ -3,8 +3,10 @@
 
 #include <stdio.h>
 #include <switch.h>
+#include <stdbool.h>// bool: 1 == true; 0 == false;
 #define HALF_SCREEN 40
 
+/* Structures */
 struct V {
   short int half;
   short int half_length;
@@ -15,9 +17,12 @@ struct menu {
 	char *exit;
 	short int n;
 	short int m;
-};
+} initial;
 
-void title(char *str);
+/* Prototypes */
 void menu_options(void);
+void title(char *str);
+bool menu_main(void);
+bool functionExit(void);
 
 #endif
